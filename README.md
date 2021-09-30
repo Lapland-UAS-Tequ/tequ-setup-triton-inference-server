@@ -70,7 +70,8 @@ cd /home/$USER/triton_server/bin
 
 Example flow: https://github.com/juhaautioniemi/tequ-api-client/blob/master/flows/example-ai-detect-triton.json
 
-
+![alt text](
+https://github.com/juhaautioniemi/tequ-api-client/blob/master/images/subflows.JPG "Subflows")
 
 
 
