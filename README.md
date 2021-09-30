@@ -3,14 +3,50 @@ Configure NVIDIA Triton Inference Server on different platforms. Deploy object d
 
 ## NVIDIA Jetson Xavier NX
 
+| Software      | Version       | Link |
+| ------------- |:-------------:| :-------------:| 
+| Jetpack       | 4.6           | https://developer.nvidia.com/embedded/downloads |
+| Triton        | 2.14.0        | https://github.com/triton-inference-server/server/releases |
 
-
+Other Jetson´s might work too, but haven´t been tested.
 
 1. Install official Jetpack 4.6
 
 https://developer.nvidia.com/embedded/learn/get-started-jetson-xavier-nx-devkit
 
-2. Download Triton Inference Server package
+2. Download and install Triton Inference Server package
+```
+cd /home/
+mkdir triton_server
+cd /home/triton_server
+```
+
+```
+wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.14.0-jetpack4.6.tgz
+```
+
+```
+tar xzvf tritonserver2.14.0-jetpack4.6.tgz
+```
+
+3. Create model repository
+```
+cd /home/triton_server
+```
+```
+mkdir model_repository
+```
+```
+cd model_repository
+```
+```
+wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/model_repository.zip
+```
+
+
+
+
+
 
 3. Install dependencies
 
