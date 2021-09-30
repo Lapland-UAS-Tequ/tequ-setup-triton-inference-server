@@ -29,12 +29,6 @@ tar xzvf tritonserver2.14.0-jetpack4.6.tgz
 
 3. Create model repository
 ```
-mkdir /home/$USER/triton_server/model_repository
-```
-```
-cd /home/$USER/triton_server/model_repository
-```
-```
 wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/model_repository.zip
 ```
 ```
