@@ -74,7 +74,6 @@ Example flow: https://github.com/juhaautioniemi/tequ-api-client/blob/master/flow
 https://github.com/juhaautioniemi/tequ-setup-triton-inference-server/blob/main/images/example-ai-detect-triton.JPG "Example")
 
 
-
 ## Windows 10
 
 (TBD)
