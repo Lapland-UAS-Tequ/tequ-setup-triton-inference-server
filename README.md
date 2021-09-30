@@ -42,11 +42,9 @@ cd model_repository
 ```
 wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/model_repository.zip
 ```
-
-
-
-
-
+```
+unzip model_repository.zip
+```
 
 3. Install dependencies
 
