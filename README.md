@@ -11,7 +11,7 @@ https://developer.nvidia.com/embedded/learn/get-started-jetson-xavier-nx-devkit
 
 3. Install dependencies
 
-´´´
+```
 apt-get update && 
 apt-get install -y --no-install-recommends software-properties-common &&
 apt-get install -y --no-install-recommends autoconf &&
@@ -29,7 +29,7 @@ apt-get install -y --no-install-recommends libopenblas-dev &&
 apt-get install -y --no-install-recommends rapidjson-dev &&
 apt-get install -y --no-install-recommends patchelf &&
 apt-get install -y --no-install-recommends zlib1g-dev
-´´´
+```
 
 Download Triton Inference Server 
 
