@@ -3,6 +3,9 @@ Configure Triton Inference on different platforms. Deploy TensorFlow SavedModel 
 
 ## NVIDIA Jetson Xavier NX
 
+
+
+
 1. Install official Jetpack 4.6
 
 https://developer.nvidia.com/embedded/learn/get-started-jetson-xavier-nx-devkit
@@ -31,8 +34,11 @@ apt-get install -y --no-install-recommends patchelf &&
 apt-get install -y --no-install-recommends zlib1g-dev
 ```
 
-Download Triton Inference Server 
+4. Download Triton Inference Server 
 
+5. Download example model repository
+
+6. 
 
 ## Windows 10 (TBD)
 
