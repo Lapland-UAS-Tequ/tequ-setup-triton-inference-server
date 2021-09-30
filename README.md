@@ -4,7 +4,7 @@ Configure NVIDIA Triton Inference Server on different platforms. Deploy object d
 ## NVIDIA Jetson Xavier NX
 
 | Software      | Version       | Link |
-| ------------- |:-------------:| :-------------:| 
+| ------------- |:-------------:| :-------------:|
 | Jetpack       | 4.6           | https://developer.nvidia.com/embedded/downloads |
 | Triton        | 2.14.0        | https://github.com/triton-inference-server/server/releases |
 
@@ -38,7 +38,7 @@ unzip model_repository.zip
 4. Install dependencies
 
 ```
-apt-get update && 
+apt-get update &&
 apt-get install -y --no-install-recommends software-properties-common &&
 apt-get install -y --no-install-recommends autoconf &&
 apt-get install -y --no-install-recommends automake &&
@@ -71,17 +71,16 @@ cd /home/$USER/triton_server/bin
 Example flow: https://github.com/juhaautioniemi/tequ-api-client/blob/master/flows/example-ai-detect-triton.json
 
 ![alt text](
-https://github.com/juhaautioniemi/tequ-api-client/blob/master/images/subflows.JPG "Subflows")
+https://github.com/juhaautioniemi/tequ-setup-triton-inference-server/blob/main/images/example-ai-detect-triton.JPG "Example")
 
 
 
+## Windows 10
+
+(TBD)
 
 
-## Windows 10 (TBD)
-
-
-
-Sources:
+## Sources:
 
 https://developer.nvidia.com/embedded/learn/get-started-jetson-xavier-nx-devkit
 
