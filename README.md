@@ -1,5 +1,5 @@
 # tequ-setup-triton-inference-server
-Configure Triton Inference on different platforms. Deploy TensorFlow SavedModel object detection model to server and send images to inference server from Node-RED. 
+Configure NVIDIA Triton Inference Server on different platforms. Deploy object detection model in Tensorflow SavedModel format to server. Send images to server for inference with Node-RED.
 
 ## NVIDIA Jetson Xavier NX
 
