@@ -35,7 +35,7 @@ wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/mod
 unzip model_repository.zip
 ```
 
-3. Install dependencies
+4. Install dependencies
 
 ```
 apt-get update && 
@@ -57,9 +57,14 @@ apt-get install -y --no-install-recommends patchelf &&
 apt-get install -y --no-install-recommends zlib1g-dev
 ```
 
-4. Download Triton Inference Server 
+5. Start Triton Inference Server
+```
+cd /home/$USER/triton_server/bin
+```
 
-5. Download example model repository
+```
+./tritonserver --model-repository=/home/$USER/triton_server/model_repository --backend-directory=/home/$USER/triton_server/backends --backend-config=tensorflow,version=2 --strict-model-config=false
+```
 
 6. 
 
