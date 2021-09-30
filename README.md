@@ -66,7 +66,15 @@ cd /home/$USER/triton_server/bin
 ./tritonserver --model-repository=/home/$USER/triton_server/model_repository --backend-directory=/home/$USER/triton_server/backends --backend-config=tensorflow,version=2 --strict-model-config=false
 ```
 
-6. 
+6. Send image to server from Node-RED
+
+Example flow: https://github.com/juhaautioniemi/tequ-api-client/blob/master/flows/example-ai-detect-triton.json
+
+
+
+
+
+
 
 ## Windows 10 (TBD)
 
