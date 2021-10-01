@@ -120,3 +120,5 @@ https://github.com/juhaautioniemi/tequ-setup-triton-inference-server/blob/main/i
 https://developer.nvidia.com/embedded/learn/get-started-jetson-xavier-nx-devkit
 
 https://github.com/triton-inference-server/server/releases
+
+https://www.howtogeek.com/687970/how-to-run-a-linux-program-at-startup-with-systemd/
