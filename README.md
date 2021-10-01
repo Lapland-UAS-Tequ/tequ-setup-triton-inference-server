@@ -66,7 +66,43 @@ cd /home/$USER/triton_server/bin
 ./tritonserver --model-repository=/home/$USER/triton_server/model_repository --backend-directory=/home/$USER/triton_server/backends --backend-config=tensorflow,version=2 --strict-model-config=false
 ```
 
-6. Send image to server from Node-RED
+6. Autostart on boot
+
+Create file 'triton.service' to folder /etc/system.d/system
+```
+sudo nano /etc/systemd/system/triton.service
+```
+
+Example file content, correct your paths if needed.
+```
+[Unit]
+Description=NVIDIA Triton Inference Server
+
+Wants=network.target
+After=syslog.target network-online.target
+
+[Service]
+Type=simple
+ExecStart=/home/tequ/triton_server/bin/tritonserver --model-repository=/home/tequ/triton_server/model_repository --backend-directory=/home/tequ/triton_server/backends --backend-config=tensorflow,version=2 --strict-model-config=false
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Enable service
+```
+sudo systemctl enable triton.service
+```
+Start service
+```
+sudo systemctl start triton.service
+```
+
+
+7. Send image to server from Node-RED
 
 Example flow: https://github.com/juhaautioniemi/tequ-api-client/blob/master/flows/example-ai-detect-triton.json
 
