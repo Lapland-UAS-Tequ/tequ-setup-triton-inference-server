@@ -104,10 +104,10 @@ sudo systemctl start triton.service
 
 7. Send image to server from Node-RED
 
-Example flow: https://github.com/juhaautioniemi/tequ-api-client/blob/master/flows/example-ai-detect-triton.json
+Example flow: https://github.com/Lapland-UAS-Tequ/tequ-api-client/blob/master/flows/example-ai-detect-triton.json
 
 ![alt text](
-https://github.com/juhaautioniemi/tequ-setup-triton-inference-server/blob/main/images/example-ai-detect-triton.JPG "Example")
+https://github.com/Lapland-UAS-Tequ/tequ-setup-triton-inference-server/blob/main/images/example-ai-detect-triton.JPG "Example")
 
 
 ## Windows 10
