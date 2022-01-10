@@ -101,7 +101,6 @@ Start service
 sudo systemctl start triton.service
 ```
 
-
 7. Send image to server from Node-RED
 
 Example flow: https://github.com/Lapland-UAS-Tequ/tequ-api-client/blob/master/flows/example-ai-detect-triton.json
@@ -112,7 +111,24 @@ https://github.com/Lapland-UAS-Tequ/tequ-setup-triton-inference-server/blob/main
 
 ## Windows 10
 
-(TBD)
+1. Install Docker
+
+https://www.docker.com/
+
+2. Pull Triton Inference Server docker image
+```
+docker pull nvcr.io/nvidia/tritonserver:21.12-tf2-python-py3
+```
+
+3. Download and unzip model repository to c:\tritonserver\model_repository
+
+https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/model_repository.zip
+
+4. Start Docker (without GPU support)
+
+```
+docker run --rm -p8000:8000 -p8001:8001 -p8002:8002 -v C:\tritonserver\model_repository:/models nvcr.io/nvidia/tritonserver:21.12-tf2-python-py3 tritonserver --model-repository=/models  --backend-config=tensorflow,version=2 --strict-model-config=false
+```
 
 
 ## Sources:
