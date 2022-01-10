@@ -10,11 +10,11 @@ Configure NVIDIA Triton Inference Server on different platforms. Deploy object d
 
 Other Jetson´s might work too, but haven´t been tested.
 
-1. Install official Jetpack 4.6
+### 1. Install official Jetpack 4.6
 
 https://developer.nvidia.com/embedded/learn/get-started-jetson-xavier-nx-devkit
 
-2. Download and install Triton Inference Server package
+### 2. Download and install Triton Inference Server package
 ```
 mkdir /home/$USER/triton_server
 cd /home/$USER/triton_server
@@ -27,7 +27,7 @@ wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tri
 tar xzvf tritonserver2.14.0-jetpack4.6.tgz
 ```
 
-3. Create model repository
+### 3. Create model repository
 ```
 wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/model_repository.zip
 ```
@@ -35,7 +35,7 @@ wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/mod
 unzip model_repository.zip
 ```
 
-4. Install dependencies
+### 4. Install dependencies
 
 ```
 apt-get update &&
@@ -57,7 +57,7 @@ apt-get install -y --no-install-recommends patchelf &&
 apt-get install -y --no-install-recommends zlib1g-dev
 ```
 
-5. Start Triton Inference Server
+### 5. Start Triton Inference Server
 ```
 cd /home/$USER/triton_server/bin
 ```
@@ -66,7 +66,7 @@ cd /home/$USER/triton_server/bin
 ./tritonserver --model-repository=/home/$USER/triton_server/model_repository --backend-directory=/home/$USER/triton_server/backends --backend-config=tensorflow,version=2 --strict-model-config=false
 ```
 
-6. Autostart on boot
+### 6. Autostart on boot
 
 Create file 'triton.service' to folder /etc/systemd/system
 ```
@@ -101,7 +101,7 @@ Start service
 sudo systemctl start triton.service
 ```
 
-7. Send image to server from Node-RED
+### 7. Send image to server from Node-RED
 
 Example flow: https://github.com/Lapland-UAS-Tequ/tequ-api-client/blob/master/flows/example-ai-detect-triton.json
 
@@ -111,20 +111,20 @@ https://github.com/Lapland-UAS-Tequ/tequ-setup-triton-inference-server/blob/main
 
 ## Windows 10
 
-1. Install Docker
+### 1. Install Docker
 
 https://www.docker.com/
 
-2. Pull Triton Inference Server docker image
+### 2. Pull Triton Inference Server docker image
 ```
 docker pull nvcr.io/nvidia/tritonserver:21.12-tf2-python-py3
 ```
 
-3. Download and unzip model repository to c:\tritonserver\model_repository
+### 3. Download and unzip model repository to c:\tritonserver\model_repository
 
 https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/model_repository.zip
 
-4. Start Docker (without GPU support)
+### 4. Start Docker (without GPU support)
 
 ```
 docker run --rm -p8000:8000 -p8001:8001 -p8002:8002 -v C:\tritonserver\model_repository:/models nvcr.io/nvidia/tritonserver:21.12-tf2-python-py3 tritonserver --model-repository=/models  --backend-config=tensorflow,version=2 --strict-model-config=false
