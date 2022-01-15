@@ -38,23 +38,23 @@ unzip model_repository.zip
 ### 4. Install dependencies
 
 ```
-apt-get update &&
-apt-get install -y --no-install-recommends software-properties-common &&
-apt-get install -y --no-install-recommends autoconf &&
-apt-get install -y --no-install-recommends automake &&
-apt-get install -y --no-install-recommends build-essential &&
-apt-get install -y --no-install-recommends cmake &&
-apt-get install -y --no-install-recommends git &&
-apt-get install -y --no-install-recommends libb64-dev &&
-apt-get install -y --no-install-recommends libre2-dev &&
-apt-get install -y --no-install-recommends libssl-dev &&
-apt-get install -y --no-install-recommends libtool &&
-apt-get install -y --no-install-recommends libboost-dev &&
-apt-get install -y --no-install-recommends libcurl4-openssl-dev &&
-apt-get install -y --no-install-recommends libopenblas-dev &&
-apt-get install -y --no-install-recommends rapidjson-dev &&
-apt-get install -y --no-install-recommends patchelf &&
-apt-get install -y --no-install-recommends zlib1g-dev
+sudo apt-get update &&
+sudo apt-get install -y --no-install-recommends software-properties-common &&
+sudo apt-get install -y --no-install-recommends autoconf &&
+sudo apt-get install -y --no-install-recommends automake &&
+sudo apt-get install -y --no-install-recommends build-essential &&
+sudo apt-get install -y --no-install-recommends cmake &&
+sudo apt-get install -y --no-install-recommends git &&
+sudo apt-get install -y --no-install-recommends libb64-dev &&
+sudo apt-get install -y --no-install-recommends libre2-dev &&
+sudo apt-get install -y --no-install-recommends libssl-dev &&
+sudo apt-get install -y --no-install-recommends libtool &&
+sudo apt-get install -y --no-install-recommends libboost-dev &&
+sudo apt-get install -y --no-install-recommends libcurl4-openssl-dev &&
+sudo apt-get install -y --no-install-recommends libopenblas-dev &&
+sudo apt-get install -y --no-install-recommends rapidjson-dev &&
+sudo apt-get install -y --no-install-recommends patchelf &&
+sudo apt-get install -y --no-install-recommends zlib1g-dev
 ```
 
 ### 5. Start Triton Inference Server
