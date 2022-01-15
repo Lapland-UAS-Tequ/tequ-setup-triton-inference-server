@@ -109,7 +109,7 @@ Example flow:
 ```
 
 ![alt text](
-https://github.com/Lapland-UAS-Tequ/tequ-setup-triton-inference-server/blob/main/images/example-ai-detect-triton.JPG "Example")
+https://github.com/Lapland-UAS-Tequ/tequ-setup-triton-inference-server/blob/main/images/triton-example-flow.JPG "Example")
 
 
 ## Windows 10
