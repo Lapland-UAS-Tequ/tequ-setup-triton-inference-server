@@ -20,7 +20,7 @@ Other Jetson´s might work too, but haven´t been tested.
 
 https://developer.nvidia.com/embedded/learn/get-started-jetson-xavier-nx-devkit
 
-## 2. Download and install Triton Inference Server package
+## 2. Download and extract Triton Inference Server package
 ```
 mkdir /home/$USER/triton_server
 cd /home/$USER/triton_server
