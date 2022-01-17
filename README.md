@@ -12,7 +12,7 @@ Configure NVIDIA Triton Inference Server on different platforms. Deploy object d
 | Software      | Version       | Link |
 | ------------- |:-------------:| :-------------:|
 | Jetpack       | 4.6           | https://developer.nvidia.com/embedded/downloads |
-| Triton        | 2.14.0        | https://github.com/triton-inference-server/server/releases |
+| Triton        | 2.17.0        | https://github.com/triton-inference-server/server/releases |
 
 Other Jetson´s might work too, but haven´t been tested.
 
@@ -26,11 +26,11 @@ mkdir /home/$USER/triton_server
 cd /home/$USER/triton_server
 ```
 ```
-wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.14.0-jetpack4.6.tgz
+wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.17.0-jetpack4.6.tgz
 ```
 
 ```
-tar xzvf tritonserver2.14.0-jetpack4.6.tgz
+tar xzvf tritonserver2.17.0-jetpack4.6.tgz
 ```
 
 ## 3. Create model repository
