@@ -36,6 +36,13 @@ tar xzvf tritonserver2.17.0-jetpack4.6.tgz
 ## 3. Create model repository
 
 Download example model repository with pre-installed Tensorflow savedmodel. 
+
+Example model is SSD MobileNet v2 320x320 model from TensorFlow 2 Detection Model Zoo
+
+https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md
+
+Model is trained to detect usual things like person, cat, dog, teddy bear etc..
+
 ```
 wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/model_repository.zip
 ```
