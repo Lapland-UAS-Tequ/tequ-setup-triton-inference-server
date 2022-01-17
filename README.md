@@ -34,6 +34,8 @@ tar xzvf tritonserver2.17.0-jetpack4.6.tgz
 ```
 
 ## 3. Create model repository
+
+Download example model repository with pre-installed Tensorflow savedmodel. 
 ```
 wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/model_repository.zip
 ```
