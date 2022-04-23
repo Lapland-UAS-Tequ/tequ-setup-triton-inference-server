@@ -116,7 +116,13 @@ Start service
 sudo systemctl start triton.service
 ```
 
-# Windows 10
+# Windows 10 (beta)
+
+
+
+
+
+# Windows 10 (Docker)
 
 ## 1. Install Docker
 
