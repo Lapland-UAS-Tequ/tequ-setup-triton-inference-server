@@ -118,8 +118,7 @@ sudo systemctl start triton.service
 
 # Windows 10 (beta)
 
-Add steps with Triton 2.20.0 here
-
+TBD (Add steps with Triton 2.20.0 here)
 
 
 # Windows 10 (Docker)
