@@ -33,6 +33,15 @@ wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tri
 tar xzvf tritonserver2.17.0-jetpack4.6.tgz
 ```
 
+For Neousys NRU-120S factory setup use Triton for Jetpack 4.4
+```
+wget https://github.com/triton-inference-server/server/releases/download/v2.6.0/tritonserver2.6.0-jetpack4.4.tgz
+```
+
+```
+tar xzvf tritonserver2.6.0-jetpack4.4.tgz
+```
+
 ## 3. Create model repository
 
 Download example model repository with pre-installed Tensorflow savedmodel. 
