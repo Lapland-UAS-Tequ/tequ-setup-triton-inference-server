@@ -32,7 +32,7 @@ cd /home/$USER/triton_server
 
 ### Jetpack 5.0.2
 ```
-wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.24.0-jetpack4.6.tgz
+wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.24.0-jetpack5.0.2.tgz
 ```
 
 ```
@@ -42,7 +42,7 @@ tar xzvf tritonserver2.24.0-jetpack5.0.2.tgz
 
 ### Jetpack 4.6.2
 ```
-wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.19.0-jetpack4.6.tgz
+wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.19.0-jetpack4.6.1.tgz
 ```
 
 ```
