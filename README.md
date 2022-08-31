@@ -51,7 +51,7 @@ tar xzvf tritonserver2.19.0-jetpack4.6.1.tgz
 
 
 ### Jetpack 4.4 
-Neousys NRU-120S factory setup installation uses Jetpack 4.4
+For example Neousys NRU-120S (Jetson AGX) factory setup installation uses Jetpack 4.4
 ```
 wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.6.0-jetpack4.4.tgz
 ```
