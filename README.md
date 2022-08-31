@@ -32,7 +32,7 @@ cd /home/$USER/triton_server
 
 ### Jetpack 5.0.2
 ```
-wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.24.0-jetpack5.0.2.tgz
+wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.24.0-jetpack5.0.2.tgz
 ```
 
 ```
@@ -42,7 +42,7 @@ tar xzvf tritonserver2.24.0-jetpack5.0.2.tgz
 
 ### Jetpack 4.6.2
 ```
-wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.19.0-jetpack4.6.1.tgz
+wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.19.0-jetpack4.6.1.tgz
 ```
 
 ```
@@ -53,7 +53,7 @@ tar xzvf tritonserver2.19.0-jetpack4.6.1.tgz
 ### Jetpack 4.4 
 Neousys NRU-120S factory setup installation uses Jetpack 4.4
 ```
-wget https://github.com/triton-inference-server/server/releases/download/v2.6.0/tritonserver2.6.0-jetpack4.4.tgz
+wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.6.0-jetpack4.4.tgz
 ```
 
 ```
