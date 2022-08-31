@@ -7,14 +7,18 @@ https://www.tequ.fi/en/project-bank/fish-iot/
 # tequ-setup-triton-inference-server
 Configure NVIDIA Triton Inference Server on different platforms. Deploy object detection model in Tensorflow SavedModel format to server. Send images to server for inference with Node-RED. Triton Inference Server HTTP API is used for inference.
 
-# NVIDIA Jetson Xavier NX / Nano
+# Requirements
+
+Jetson device (Nano, NX, AGX)
+
+
 
 | Software      | Version       | Link |
 | ------------- |:-------------:| :-------------:|
-| Jetpack       | 4.6           | https://developer.nvidia.com/embedded/downloads |
-| Triton        | 2.17.0        | https://github.com/triton-inference-server/server/releases |
+| Jetpack       | 4.4, 4.6.2, 5.0.2     | https://developer.nvidia.com/embedded/downloads |
+| Triton        | 2.6.0, 2.19.0, 2.24.0 | https://github.com/triton-inference-server/server/releases |
 
-Other Jetson´s might work too, but haven´t been tested.
+Other Jetson´s and Jetpack + Triton combinations might work too, but haven´t been tested. Jetpack 5.0.2 does not work with Jetson Nano.
 
 ## 1. Install latest official Jetpack for your Jetson
 
