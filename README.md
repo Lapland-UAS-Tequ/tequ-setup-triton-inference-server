@@ -16,15 +16,17 @@ Configure NVIDIA Triton Inference Server on different platforms. Deploy object d
 
 Other Jetson´s might work too, but haven´t been tested.
 
-## 1. Install official Jetpack 4.6
+## 1. Install latest official Jetpack for your Jetson
 
-https://developer.nvidia.com/embedded/learn/get-started-jetson-xavier-nx-devkit
+https://developer.nvidia.com/embedded/downloads
 
 ## 2. Download and extract Triton Inference Server package
 ```
 mkdir /home/$USER/triton_server
 cd /home/$USER/triton_server
 ```
+
+### Jetpack 5.0.2
 ```
 wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.17.0-jetpack4.6.tgz
 ```
@@ -33,6 +35,18 @@ wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tri
 tar xzvf tritonserver2.17.0-jetpack4.6.tgz
 ```
 
+
+### Jetpack 4.6
+```
+wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.17.0-jetpack4.6.tgz
+```
+
+```
+tar xzvf tritonserver2.17.0-jetpack4.6.tgz
+```
+
+
+### Jetpack 4.4 (Jetson AGX NRU-120S factory default)
 For Neousys NRU-120S factory setup use Triton for Jetpack 4.4
 ```
 wget https://github.com/triton-inference-server/server/releases/download/v2.6.0/tritonserver2.6.0-jetpack4.4.tgz
