@@ -28,26 +28,26 @@ cd /home/$USER/triton_server
 
 ### Jetpack 5.0.2
 ```
-wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.17.0-jetpack4.6.tgz
+wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.24.0-jetpack4.6.tgz
 ```
 
 ```
-tar xzvf tritonserver2.17.0-jetpack4.6.tgz
+tar xzvf tritonserver2.24.0-jetpack5.0.2.tgz
 ```
 
 
-### Jetpack 4.6
+### Jetpack 4.6.2
 ```
-wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.17.0-jetpack4.6.tgz
-```
-
-```
-tar xzvf tritonserver2.17.0-jetpack4.6.tgz
+wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.19.0-jetpack4.6.tgz
 ```
 
+```
+tar xzvf tritonserver2.19.0-jetpack4.6.1.tgz
+```
 
-### Jetpack 4.4 (Jetson AGX NRU-120S factory default)
-For Neousys NRU-120S factory setup use Triton for Jetpack 4.4
+
+### Jetpack 4.4 
+Neousys NRU-120S factory setup installation uses Jetpack 4.4
 ```
 wget https://github.com/triton-inference-server/server/releases/download/v2.6.0/tritonserver2.6.0-jetpack4.4.tgz
 ```
@@ -141,7 +141,7 @@ sudo systemctl start triton.service
 
 # Windows 10 (beta)
 
-TBD (Add steps with Triton 2.20.0 here)
+TBD (Add steps here)
 
 
 # Windows 10 (Docker)
