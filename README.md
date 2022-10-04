@@ -16,7 +16,7 @@ Jetson device (Nano, NX, AGX)
 | Software      | Version       | Link |
 | ------------- |:-------------:| :-------------:|
 | Jetpack       | 4.4, 4.6.2, 5.0.2     | https://developer.nvidia.com/embedded/downloads |
-| Triton        | 2.6.0, 2.19.0, 2.24.0 | https://github.com/triton-inference-server/server/releases |
+| Triton        | 2.6.0, 2.19.0, 2.26.0 | https://github.com/triton-inference-server/server/releases |
 
 Other Jetson´s and Jetpack + Triton combinations might work too, but haven´t been tested. Jetpack 5.0.2 does not work with Jetson Nano.
 
