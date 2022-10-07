@@ -116,6 +116,11 @@ cd /home/$USER/triton_server/bin
 ## 6. Autostart on boot
 
 Create file 'triton.service' to folder /etc/systemd/system
+
+```
+sudo apt install nano
+```
+
 ```
 sudo nano /etc/systemd/system/triton.service
 ```
