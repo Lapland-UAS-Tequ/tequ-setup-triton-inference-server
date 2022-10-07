@@ -108,6 +108,11 @@ cd /home/$USER/triton_server/bin
 ./tritonserver --model-repository=/home/$USER/triton_server/model_repository --backend-directory=/home/$USER/triton_server/backends --backend-config=tensorflow,version=2 --strict-model-config=false
 ```
 
+
+```
+./tritonserver --model-repository=/home/$USER/triton_server/model_repository --backend-directory=/home/$USER/triton_server/backends --backend-config=tensorflow,version=2 --disable-auto-complete-config
+```
+
 ## 6. Autostart on boot
 
 Create file 'triton.service' to folder /etc/systemd/system
