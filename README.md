@@ -257,6 +257,10 @@ cd ~/.node-red
 npm install numjs
 ```
 
+```
+npm install piscina
+```
+
 ### Example flow 2 (without Tensorflow processing): 
 
 ```
