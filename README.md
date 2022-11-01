@@ -168,10 +168,17 @@ docker pull nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3
 
 https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/model_repository.zip
 
-## 4. Start Docker (without GPU support)
+## 4. Start Docker
+
+Without GPU support
 
 ```
 docker run --rm -p8000:8000 -p8001:8001 -p8002:8002 -v C:\tritonserver\model_repository:/models nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3 tritonserver --model-repository=/models  --backend-config=tensorflow,version=2 --strict-model-config=false
+```
+
+With GPU support
+```
+docker run --gpus=1 --rm -p8000:8000 -p8001:8001 -p8002:8002 -v C:\tritonserver\model_repository:/models nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3 tritonserver --model-repository=/models  --backend-config=tensorflow,version=2 --strict-model-config=false
 ```
 
 # Use Triton Inference Server from Node-RED
