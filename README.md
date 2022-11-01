@@ -7,10 +7,11 @@ https://www.tequ.fi/en/project-bank/fish-iot/
 # tequ-setup-triton-inference-server
 Configure NVIDIA Triton Inference Server on different platforms. Deploy object detection model in Tensorflow SavedModel format to server. Send images to server for inference with Node-RED. Triton Inference Server HTTP API is used for inference.
 
-# Requirements
+# Jetson board
 
-Jetson device (Nano, NX, AGX)
+## Requirements
 
+Jetson device (Nano, NX, AGX, AGX Orin)
 
 
 | Software      | Version       | Link |
