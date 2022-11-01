@@ -160,7 +160,7 @@ https://www.docker.com/
 
 ## 2. Pull Triton Inference Server docker image
 ```
-docker pull nvcr.io/nvidia/tritonserver:21.12-tf2-python-py3
+docker pull nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3
 ```
 
 ## 3. Download and unzip model repository to c:\tritonserver\model_repository
