@@ -41,7 +41,7 @@ tar xzvf tritonserver2.26.0-jetpack5.0.2.tgz
 ```
 
 
-### Jetpack 4.6.2
+### Jetpack 4.6.1
 ```
 wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/tritonserver2.19.0-jetpack4.6.1.tgz
 ```
