@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: triton-server
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: triton-server
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: triton-server
+    spec:
+      containers:
+      - name: triton-server
+        image: ADD_IMAGE_NAME_HERE
+        imagePullPolicy: Always
+        args: ["tritonserver", "--model-store=/data/model_repository"]
+        volumeMounts:
+        - mountPath: "/data/"
+          name: ADD_PV_VOLUME_NAME_HERE
+        ports:
+          - containerPort: 8000
+            name: http
+          - containerPort: 8001
+            name: grpc
+          - containerPort: 8002
+            name: metrics
+      volumes:
+      - name: ADD_PV_VOLUME_NAME_HERE
+        persistentVolumeClaim:
+          claimName: ADD_PV_CLAIM_VOLUME_NAME_HERE
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: triton-server
+  name: triton-server
+  namespace: default
+spec:
+  ports:
+  - port: 8000
+    targetPort: http
+    name: http-inference-server
+  - port: 8001
+    targetPort: grpc
+    name: grpc-inference-server
+  - port: 8002
+    targetPort: metrics
+    name: metrics-inference-server
+  selector:
+    app: tequ-triton-server
+  type: NodePort
