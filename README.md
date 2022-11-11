@@ -186,6 +186,7 @@ docker run --gpus=1 --rm -p8000:8000 -p8001:8001 -p8002:8002 -v C:\tritonserver\
 Requirements:
 - IBM Cloud Kubernetes cluster
 - CLI tools & plugins installed
+- Knowledge how IBM Cloud & Docker & Kubernetes works (this example does not work copy&paste)
 
 ```
 ibmcloud login
@@ -204,19 +205,18 @@ docker pull nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3
 ```
 
 ```
-docker tag nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3 de.icr.io/YOUR_CR_NAMESPACE/triton_server:1
+docker tag nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3 de.icr.io/YOUR_CR_NAMESPACE/triton-server:1
 ```
 
 ```
-docker push de.icr.io/YOUR_CR_NAMESPACE/triton_server:1
+docker push de.icr.io/YOUR_CR_NAMESPACE/triton-server:1
 ```
 
 ```
 kubectl apply -f triton.yaml
 ```
 
-
-
+Finally check what IP address LoadBalancer applied and use that for inference. 
 
 # Use Triton Inference Server from Node-RED
 
