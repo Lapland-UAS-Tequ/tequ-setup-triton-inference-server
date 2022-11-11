@@ -7,6 +7,12 @@ https://www.tequ.fi/en/project-bank/fish-iot/
 # tequ-setup-triton-inference-server
 Configure NVIDIA Triton Inference Server on different platforms. Deploy object detection model in Tensorflow SavedModel format to server. Send images to server for inference with Node-RED. Triton Inference Server HTTP API is used for inference.
 
+Different options:
+- Jetson board (GPU)
+- Jetson Board with Docker (CPU)
+- Windows Machine with Docker (GPU or CPU)
+- IBM Cloud Kubernetes Cluster (CPU)
+
 # Jetson board
 
 ## Requirements
@@ -215,6 +221,8 @@ Requirements:
 - IBM Cloud Kubernetes cluster
 - CLI tools & plugins installed
 - Knowledge how IBM Cloud & Docker & Kubernetes works (this example does not work copy&paste)
+
+This example is tested with usual cluster with no GPUs available.
 
 ```
 ibmcloud login
