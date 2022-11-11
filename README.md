@@ -153,6 +153,30 @@ Start service
 ```
 sudo systemctl start triton.service
 ```
+
+# Jetson Board (Docker)
+
+Tested with Jetpack 5.0.2 and Jetson AGX Orin. Is not able to use GPU at the moment. Inferencing using just CPU seems to be quite fast too.
+
+```
+cd $home
+```
+
+```
+wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/model_repository.zip
+```
+
+```
+unzip model_repository.zip
+```
+
+```
+docker run --rm -p8000:8000 -p8001:8001 -p8002:8002 -v /home/tequ/model_repository:/models nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3 tritonserver --model-repository=/models  --backend-config=tensorflow,version=2 --strict-model-config=false
+```
+
+Starts Triton Inference Server using Docker.
+
+
 # Windows 10 (Docker)
 
 ## 1. Install Docker
