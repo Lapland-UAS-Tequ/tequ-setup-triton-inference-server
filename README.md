@@ -19,7 +19,6 @@ Different options:
 
 Jetson device (Nano, NX, AGX, AGX Orin)
 
-
 | Software      | Version       | Link |
 | ------------- |:-------------:| :-------------:|
 | Jetpack       | 4.4, 4.6.2, 5.0.2     | https://developer.nvidia.com/embedded/downloads |
