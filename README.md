@@ -171,6 +171,10 @@ unzip model_repository.zip
 ```
 
 ```
+docker pull nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3
+```
+
+```
 docker run --rm -p8000:8000 -p8001:8001 -p8002:8002 -v /home/tequ/model_repository:/models nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3 tritonserver --model-repository=/models  --backend-config=tensorflow,version=2 --strict-model-config=false
 ```
 
