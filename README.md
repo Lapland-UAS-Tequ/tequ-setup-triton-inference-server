@@ -181,6 +181,43 @@ With GPU support
 docker run --gpus=1 --rm -p8000:8000 -p8001:8001 -p8002:8002 -v C:\tritonserver\model_repository:/models nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3 tritonserver --model-repository=/models  --backend-config=tensorflow,version=2 --strict-model-config=false
 ```
 
+# Simple Triton deployment to IBM Cloud Kubernetes Cluster
+
+Requirements:
+- IBM Cloud Kubernetes cluster
+- CLI tools & plugins installed
+
+```
+ibmcloud login
+```
+
+```
+ibmcloud cr login
+```
+
+```
+ibmcloud ks cluster config --cluster YOUR_CLUSTER_ID
+```
+
+```
+docker pull nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3
+```
+
+```
+docker tag nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3 de.icr.io/YOUR_CR_NAMESPACE/triton_server:1
+```
+
+```
+docker push de.icr.io/YOUR_CR_NAMESPACE/triton_server:1
+```
+
+```
+kubectl apply -f triton.yaml
+```
+
+
+
+
 # Use Triton Inference Server from Node-RED
 
 ## Example flow 1: 
