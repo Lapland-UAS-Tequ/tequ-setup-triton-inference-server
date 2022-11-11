@@ -15,12 +15,12 @@ spec:
     spec:
       containers:
       - name: triton-server
-        image: ADD_IMAGE_NAME_HERE
+        image: de.icr.io/YOUR_CR_NAMESPACE/triton-server:1
         imagePullPolicy: Always
         args: ["tritonserver", "--model-store=/data/model_repository"]
         volumeMounts:
         - mountPath: "/data/"
-          name: ADD_PV_VOLUME_NAME_HERE
+          name: YOUR_PV_VOLUME_NAME_HERE
         ports:
           - containerPort: 8000
             name: http
@@ -29,9 +29,9 @@ spec:
           - containerPort: 8002
             name: metrics
       volumes:
-      - name: ADD_PV_VOLUME_NAME_HERE
+      - name: YOUR_PV_VOLUME_NAME_HERE
         persistentVolumeClaim:
-          claimName: ADD_PV_CLAIM_VOLUME_NAME_HERE
+          claimName: YOUR_PV_CLAIM_VOLUME_NAME_HERE
 ---
 apiVersion: v1
 kind: Service
@@ -52,5 +52,5 @@ spec:
     targetPort: metrics
     name: metrics-inference-server
   selector:
-    app: tequ-triton-server
-  type: NodePort
+    app: tequ-example-app
+  type: LoadBalancer
