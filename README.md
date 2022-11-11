@@ -326,3 +326,7 @@ https://github.com/Lapland-UAS-Tequ/tequ-setup-triton-inference-server/blob/main
 https://github.com/triton-inference-server/server/releases
 
 https://www.howtogeek.com/687970/how-to-run-a-linux-program-at-startup-with-systemd/
+
+# Notes
+
+These examples use HTTP for sending Tensor data to server and throughput (inferences/sec) might be limited because of limitations of HTTP protocol. If you need more throughput (inferences/sec), you can try to start multiple Triton instances and/or make parallel requests to server from client machine.
