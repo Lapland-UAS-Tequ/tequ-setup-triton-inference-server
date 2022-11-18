@@ -223,6 +223,8 @@ Requirements:
 
 This example is tested with usual cluster with no GPUs available.
 
+Login into you IBM Cloud account & container registry & Kubernetes cluster
+
 ```
 ibmcloud login
 ```
@@ -234,6 +236,75 @@ ibmcloud cr login
 ```
 ibmcloud ks cluster config --cluster YOUR_CLUSTER_ID
 ```
+
+
+Before deploying Triton, claim new persistent volume into your cluster and modify PV and PV claim parameters into triton.yaml.
+
+```
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: triton-pvc
+  namespace: default
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 20Gi
+  storageClassName: ibmc-file-bronze
+  volumeMode: Filesystem
+```
+
+
+One way to pre-install model repository to persistent volume is using a simple pod. Deploy pod to Kubernetes, exec into pod using Kubenetes dashboard or cli, install wget or curl, change into mounted "/data" directory and download and unzip example model repository. 
+
+Example pod:
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu
+  labels:
+    app: ubuntu
+spec:
+  volumes:
+  - name: <PV_NAME>
+    persistentVolumeClaim:
+      claimName: triton-pvc
+  containers:
+  - image: ubuntu
+    command:
+      - "sleep"
+      - "604800"
+    imagePullPolicy: IfNotPresent
+    name: ubuntu
+    volumeMounts:
+      - mountPath: "/data/"
+        name: <PV_NAME>
+```
+
+
+Install model repository
+
+```
+apt-get update
+```
+
+```
+apt-get install wget unzip
+```
+
+```
+wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/model_repository.zip
+```
+
+```
+unzip model_repository.zip
+```
+
+
+Deploy Triton into Kubernetes
 
 ```
 docker pull nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3
