@@ -52,5 +52,5 @@ spec:
     targetPort: metrics
     name: metrics-inference-server
   selector:
-    app: tequ-example-app
+    app: triton-server
   type: LoadBalancer
