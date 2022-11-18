@@ -31,7 +31,7 @@ spec:
       volumes:
       - name: YOUR_PV_VOLUME_NAME_HERE
         persistentVolumeClaim:
-          claimName: YOUR_PV_CLAIM_VOLUME_NAME_HERE
+          claimName: triton-pvc
 ---
 apiVersion: v1
 kind: Service
