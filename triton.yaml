@@ -20,7 +20,7 @@ spec:
         args: ["tritonserver", "--model-store=/data/model_repository"]
         volumeMounts:
         - mountPath: "/data/"
-          name: YOUR_PV_VOLUME_NAME_HERE
+          name: triton-pvc
         ports:
           - containerPort: 8000
             name: http
@@ -29,7 +29,7 @@ spec:
           - containerPort: 8002
             name: metrics
       volumes:
-      - name: YOUR_PV_VOLUME_NAME_HERE
+      - name: triton-pvc
         persistentVolumeClaim:
           claimName: triton-pvc
 ---
