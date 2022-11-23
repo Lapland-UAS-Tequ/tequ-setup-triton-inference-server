@@ -269,7 +269,7 @@ metadata:
     app: ubuntu
 spec:
   volumes:
-  - name: <PV_NAME>
+  - name: triton-pvc
     persistentVolumeClaim:
       claimName: triton-pvc
   containers:
@@ -281,7 +281,7 @@ spec:
     name: ubuntu
     volumeMounts:
       - mountPath: "/data/"
-        name: <PV_NAME>
+        name: triton-pvc
 ```
 
 
