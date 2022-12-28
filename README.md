@@ -167,24 +167,29 @@ Tested with Jetpack 5.0.2 and Jetson AGX Orin. Is not able to use GPU at the mom
 cd $home
 ```
 
+Download example model repository for Triton. 
 ```
 wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/model_repository.zip
 ```
 
+Unzip model repository to local folder
 ```
 unzip model_repository.zip
 ```
 
+Pull Docker image to local repository
 ```
 docker pull nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3
 ```
 
+Start Triton Inference Server using Docker
 ```
 docker run --rm -p8000:8000 -p8001:8001 -p8002:8002 -v /home/tequ/model_repository:/models nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3 tritonserver --model-repository=/models  --backend-config=tensorflow,version=2 --strict-model-config=false
 ```
 
-Starts Triton Inference Server using Docker.
+If you want or need to configure Docker to run without root priviliges, check official guide:
 
+https://docs.docker.com/engine/install/linux-postinstall/
 
 # Windows 10 (Docker)
 
@@ -213,11 +218,6 @@ With GPU support
 ```
 docker run --gpus=1 --rm -p8000:8000 -p8001:8001 -p8002:8002 -v C:\tritonserver\model_repository:/models nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3 tritonserver --model-repository=/models  --backend-config=tensorflow,version=2 --strict-model-config=false
 ```
-
-If you want or need to configure Docker to run without root priviliges, check official guide:
-
-https://docs.docker.com/engine/install/linux-postinstall/
-
 
 # Simple Triton deployment to IBM Cloud Kubernetes Cluster
 
