@@ -362,6 +362,7 @@ sudo apt update && sudo apt upgrade
 sudo apt-get install build-essential pkg-config libglib2.0-dev libexpat1-dev ninja-build libtiff5-dev libjpeg-turbo8-dev libgsf-1-dev libgirepository1.0-dev python3.8 python3.8-dev python3.8-distutils python3-pip
 ```
 
+Install Python 3.8 if you dont have it
 ```
 sudo rm /usr/bin/python3
 ```
@@ -370,6 +371,7 @@ sudo rm /usr/bin/python3
 sudo ln -s /usr/bin/python3.8 /usr/bin/python3
 ```
 
+Install Meson if you dont have it already
 ```
 sudo pip3 install meson
 ```
@@ -384,6 +386,10 @@ git clone https://github.com/libvips/libvips.git
 
 ```
 cd libvips
+```
+
+```
+sudo apt-get install libgirepository1.0-dev
 ```
 
 ```
