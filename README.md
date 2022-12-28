@@ -359,10 +359,14 @@ sudo apt update && sudo apt upgrade
 ```
 
 ```
-sudo apt-get install build-essential pkg-config libglib2.0-dev libexpat1-dev ninja-build libtiff5-dev libjpeg-turbo8-dev libgsf-1-dev libgirepository1.0-dev python3.8 python3.8-dev python3.8-distutils python3-pip
+sudo apt-get install build-essential pkg-config libglib2.0-dev libexpat1-dev ninja-build libtiff5-dev libjpeg-turbo8-dev libgsf-1-dev libgirepository1.0-dev 
 ```
 
 Install Python 3.8 if you dont have it
+```
+python3.8-dev python3.8-distutils python3-pip
+```
+
 ```
 sudo rm /usr/bin/python3
 ```
