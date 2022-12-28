@@ -347,7 +347,7 @@ This example flow does not require Tensorflow on client computer. It uses numjs 
 
 Configure triton_server_url in "[AI] Detect - Triton" node to match your target Triton server.
 
-### Install numjs on Jetson (Tested on ubuntu 18.04 & Jetpack 4.6)
+### Install numjs on Jetson (Tested on ubuntu 18.04 & Jetpack 4.6.1)
 
 ```
 sudo apt update && sudo apt upgrade
