@@ -393,10 +393,6 @@ cd libvips
 ```
 
 ```
-sudo apt-get install libgirepository1.0-dev
-```
-
-```
 meson setup build-dir --prefix=/usr --buildtype=release
 ```
 
