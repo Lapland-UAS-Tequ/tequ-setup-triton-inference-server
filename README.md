@@ -524,17 +524,17 @@ https://github.com/Lapland-UAS-Tequ/tequ-setup-triton-inference-server/blob/main
 
 # Sources:
 
-https://github.com/triton-inference-server/server/releases
+- https://github.com/triton-inference-server/server/releases
 
-https://www.howtogeek.com/687970/how-to-run-a-linux-program-at-startup-with-systemd/
+- https://www.howtogeek.com/687970/how-to-run-a-linux-program-at-startup-with-systemd/
 
-https://developer.ridgerun.com/wiki/index.php/Tritonserver_support_for_NVIDIA_Jetson_Platforms
+- https://developer.ridgerun.com/wiki/index.php/Tritonserver_support_for_NVIDIA_Jetson_Platforms
 
-https://docs.docker.com/engine/reference/run/
+- https://docs.docker.com/engine/reference/run/
 
-https://catalog.ngc.nvidia.com/orgs/nvidia/containers/l4t-tensorflow
+- https://catalog.ngc.nvidia.com/orgs/nvidia/containers/l4t-tensorflow
 
-https://developer.nvidia.com/embedded/jetson-cloud-native
+- https://developer.nvidia.com/embedded/jetson-cloud-native
 
 # Notes
 
