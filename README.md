@@ -161,11 +161,11 @@ sudo systemctl start triton.service
 
 # Jetson Board (Docker)
 
+## Docker with CPU
+
 Tested with 
 - Jetson AGX Orin, Jetpack 5.0.2 
 - Jetson AGX Xavier, Jetpack 4.6.1
-
-This Docker approach uses CPU at Jetson. 
 
 ```
 cd $home
@@ -194,6 +194,86 @@ docker run --rm -p8000:8000 -p8001:8001 -p8002:8002 -v /home/tequ/model_reposito
 If you want or need to configure Docker to run without root priviliges, check official guide:
 
 https://docs.docker.com/engine/install/linux-postinstall/
+
+## Docker with GPU 
+
+Tested with Jetson AGX Orin Jetpack 5.0.2. For another Jetpack choose compatible NVIDIA L4T Tensorflow Container and Triton Inference Server release.
+
+https://catalog.ngc.nvidia.com/orgs/nvidia/containers/l4t-tensorflow
+
+https://github.com/triton-inference-server/server/releases/
+
+```
+cd $home
+```
+
+Download example model repository for Triton. 
+```
+wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/model_repository.zip
+```
+
+Unzip model repository to local folder
+```
+unzip model_repository.zip
+```
+```
+mkdir triton_gpu
+```
+
+```
+sudo nano Dockerfile
+```
+
+Add these lines to Dockerfile
+```
+FROM nvcr.io/nvidia/l4t-tensorflow:r35.1.0-tf2.9-py3
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        software-properties-common \
+        autoconf \
+        automake \
+        build-essential \
+        cmake \
+        git \
+        libb64-dev \
+        libre2-dev \
+        libssl-dev \
+        libtool \
+        libboost-dev \
+        libcurl4-openssl-dev \
+        rapidjson-dev \
+        patchelf \
+        zlib1g-dev && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /tritonserver
+
+RUN wget https://github.com/triton-inference-server/server/releases/download/v2.27.0/tritonserver2.27.0-jetpack5.0.2.tgz && \
+    tar -xzf tritonserver2.27.0-jetpack5.0.2.tgz && \
+    rm tritonserver2.27.0-jetpack5.0.2.tgz
+
+ENV LD_LIBRARY_PATH=/tritonserver/backends/tensorflow1:$LD_LIBRARY_PATH
+
+# tritonserver looks in /opt/tritonserver/backends by default
+RUN mkdir -p /opt/tritonserver/backends && cp -r ./backends/* /opt/tritonserver/backends/
+
+
+ENTRYPOINT ["/tritonserver/bin/tritonserver"]
+CMD ["--help"]
+```
+
+Build Docker into local repository
+```
+sudo docker build . -t triton_jp:1
+```
+
+Run docker with GPU support
+```
+docker run --gpus=1 --runtime nvidia --rm -p8000:8000 -p8001:8001 -p8002:8002 -v /home/tequ/model_repository:/models triton-jp:1 --model-repository=/models --backend-config=tensorflow,version=2
+```
 
 # Windows 10 (Docker)
 
@@ -447,6 +527,14 @@ https://github.com/Lapland-UAS-Tequ/tequ-setup-triton-inference-server/blob/main
 https://github.com/triton-inference-server/server/releases
 
 https://www.howtogeek.com/687970/how-to-run-a-linux-program-at-startup-with-systemd/
+
+https://developer.ridgerun.com/wiki/index.php/Tritonserver_support_for_NVIDIA_Jetson_Platforms
+
+https://docs.docker.com/engine/reference/run/
+
+https://catalog.ngc.nvidia.com/orgs/nvidia/containers/l4t-tensorflow
+
+https://developer.nvidia.com/embedded/jetson-cloud-native
 
 # Notes
 
