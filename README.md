@@ -283,7 +283,7 @@ https://www.docker.com/
 
 ## 2. Pull Triton Inference Server docker image
 ```
-docker pull nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3
+docker pull nvcr.io/nvidia/tritonserver:23.09-tf2-python-py3
 ```
 
 ## 3. Download and unzip model repository to c:\tritonserver\model_repository
@@ -295,12 +295,12 @@ https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/model_re
 Without GPU support
 
 ```
-docker run --rm -p8000:8000 -p8001:8001 -p8002:8002 -v C:\tritonserver\model_repository:/models nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3 tritonserver --model-repository=/models  --backend-config=tensorflow,version=2 --strict-model-config=false
+docker run --rm -p8000:8000 -p8001:8001 -p8002:8002 -v C:\tritonserver\model_repository:/models nvcr.io/nvidia/tritonserver:23.09-tf2-python-py3 tritonserver --model-repository=/models  --backend-config=tensorflow,version=2 --strict-model-config=false
 ```
 
 With GPU support
 ```
-docker run --gpus=1 --rm -p8000:8000 -p8001:8001 -p8002:8002 -v C:\tritonserver\model_repository:/models nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3 tritonserver --model-repository=/models  --backend-config=tensorflow,version=2 --strict-model-config=false
+docker run --gpus=1 --rm -p8000:8000 -p8001:8001 -p8002:8002 -v C:\tritonserver\model_repository:/models nvcr.io/nvidia/tritonserver:23.09-tf2-python-py3 tritonserver --model-repository=/models  --backend-config=tensorflow,version=2 --strict-model-config=false
 ```
 
 # Simple Triton deployment to IBM Cloud Kubernetes Cluster
@@ -396,11 +396,11 @@ unzip model_repository.zip
 Deploy Triton into Kubernetes
 
 ```
-docker pull nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3
+docker pull nvcr.io/nvidia/tritonserver:23.09-tf2-python-py3
 ```
 
 ```
-docker tag nvcr.io/nvidia/tritonserver:22.09-tf2-python-py3 de.icr.io/YOUR_CR_NAMESPACE/triton-server:1
+docker tag nvcr.io/nvidia/tritonserver:23.09-tf2-python-py3 de.icr.io/YOUR_CR_NAMESPACE/triton-server:1
 ```
 
 ```
