@@ -183,12 +183,12 @@ unzip model_repository.zip
 
 Pull Docker image to local repository
 ```
-docker pull nvcr.io/nvidia/tritonserver:22.12-tf2-python-py3
+docker pull nvcr.io/nvidia/tritonserver:23.09-tf2-python-py3
 ```
 
 Start Triton Inference Server using Docker
 ```
-docker run --runtime nvidia --rm -p8000:8000 -p8001:8001 -p8002:8002 -v /home/tequ/model_repository:/models nvcr.io/nvidia/tritonserver:22.12-tf2-python-py3 tritonserver --model-repository=/models  --backend-config=tensorflow,version=2 --strict-model-config=false
+docker run --runtime nvidia --rm -p8000:8000 -p8001:8001 -p8002:8002 -v /home/tequ/model_repository:/models nvcr.io/nvidia/tritonserver:23.09-tf2-python-py3 tritonserver --model-repository=/models  --backend-config=tensorflow,version=2 --strict-model-config=false
 ```
 
 If you want or need to configure Docker to run without root priviliges, check official guide:
